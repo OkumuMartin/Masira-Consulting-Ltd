@@ -147,11 +147,11 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-primary-foreground/70">
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-secondary" />
-                <span>123 Business Park, Embakasi, Nairobi</span>
+                <span>Fedha, Embakasi East, Nairobi</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="shrink-0 text-secondary" />
-                <a href="tel:+27123456789" className="hover:text-secondary transition-colors">+27 12 345 6789</a>
+                <a href="tel:+254751128860" className="hover:text-secondary transition-colors">+254 751 128 860</a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} className="shrink-0 text-secondary" />
