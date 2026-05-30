@@ -38,27 +38,6 @@ const orgSchema = {
   keywords: "management consulting Kenya, HR solutions Nairobi, accounting services Kenya, ICT consultancy Nairobi, business consulting East Africa, SME consulting Kenya, marketing services Nairobi",
 };
 
-const orgSchema = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: SITE.name,
-  url: SITE.url,
-  description: SITE.description,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Nairobi",
-    addressCountry: "KE",
-  },
-  areaServed: ["KE", "TZ", "UG", "RW"],
-  serviceType: [
-    "Management Consulting",
-    "Human Resource Solutions",
-    "Sales and Marketing",
-    "Accounting and Bookkeeping",
-    "ICT Consultancy",
-  ],
-};
-
 const SEOHead = ({ title, description, path = "/", type = "website", jsonLd }: SEOHeadProps) => {
   const pageTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} — Professional Business Consulting in Kenya`;
   const pageDesc = description || SITE.description;
