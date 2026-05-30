@@ -196,9 +196,8 @@ const Contact = () => {
                       <div>
                         <p className="font-medium text-foreground text-sm">Phone</p>
                         <a href="tel:+254141482542" className="text-muted-foreground text-sm hover:text-secondary transition-colors">+254 141 482 542 (Safaricom)</a>
-                        <br>
+                        <br />
                         <a href="tel:+254751128860" className="text-muted-foreground text-sm hover:text-secondary transition-colors">+254 751 128 860 (Airtel)</a>
-                        </br>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
