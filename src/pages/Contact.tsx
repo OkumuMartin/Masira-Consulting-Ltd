@@ -186,7 +186,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="font-medium text-foreground text-sm">Office</p>
-                        <p className="text-muted-foreground text-sm">Nairobi, Kenya</p>
+                        <p className="text-muted-foreground text-sm">Fedha,Nairobi, Kenya</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -195,7 +195,10 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="font-medium text-foreground text-sm">Phone</p>
-                        <a href="tel:+254700000000" className="text-muted-foreground text-sm hover:text-secondary transition-colors">+254 7XX XXX XXX</a>
+                        <a href="tel:+254141482542" className="text-muted-foreground text-sm hover:text-secondary transition-colors">+254 141 482 542 (Safaricom)</a>
+                        <br>
+                        <a href="tel:+254751128860" className="text-muted-foreground text-sm hover:text-secondary transition-colors">+254 751 128 860 (Airtel)</a>
+                        </br>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -204,7 +207,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="font-medium text-foreground text-sm">Email</p>
-                        <a href="mailto:info@ibsconsulting.co.ke" className="text-muted-foreground text-sm hover:text-secondary transition-colors">info@ibsconsulting.co.ke</a>
+                        <a href="mailto:masiraconsultingltd@gmail.com" className="text-muted-foreground text-sm hover:text-secondary transition-colors">masiraconsultingltd@gmail.com</a>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -214,8 +217,7 @@ const Contact = () => {
                       <div>
                         <p className="font-medium text-foreground text-sm">WhatsApp</p>
                         <a
-                          href={`https://wa.me/254700000000?text=${encodeURIComponent("Hi, I'd like to inquire about your consulting services.")}`}
-                          target="_blank"
+                          href={`https://wa.me/254141482542?text=${encodeURIComponent("Hi, I'd like to inquire about your consulting services.")}`}
                           rel="noopener noreferrer"
                           className="text-muted-foreground text-sm hover:text-secondary transition-colors"
                         >
@@ -229,7 +231,7 @@ const Contact = () => {
                 <div className="bg-card rounded-xl overflow-hidden shadow-card">
                   <iframe
                     title="Office Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.32335!2d36.68!3d-1.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1700000000000"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.792!2d36.8716!3d-1.3082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11a8b1c2a3d5%3A0x1234567890abcdef!2sFedha%2C%20Nairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1700000000000"
                     width="100%"
                     height="250"
                     style={{ border: 0 }}
