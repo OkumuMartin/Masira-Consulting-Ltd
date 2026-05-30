@@ -46,6 +46,7 @@ const SEOHead = ({ title, description, path = "/", type = "website", jsonLd }: S
   return (
     <Helmet>
       <title>{pageTitle}</title>
+      <meta name="google-site-verification" content="H-HbpmyifbaIH9AwCX_2e6K-NEMatQtPxNUcDUEUXV8" />
       <meta name="description" content={pageDesc} />
       <link rel="canonical" href={url} />
 
