@@ -22,7 +22,7 @@ const team = [
 const About = () => {
   return (
     <div className="min-h-screen">
-      <SEOHead title="About Us" description="Learn about IBS Consulting — our mission, vision, leadership team, and commitment to integrated business excellence in Kenya & East Africa." path="/about" />
+      <SEOHead title="About Us" description="Learn about Masira Consulting Ltd — our mission, vision, leadership team, and commitment to professional business consulting excellence in Nairobi, Kenya and East Africa." path="/about" />
       <Navbar />
       <main>
         {/* Hero */}
@@ -36,10 +36,10 @@ const About = () => {
             >
               <p className="text-secondary font-medium text-sm uppercase tracking-wide mb-3">About Us</p>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-primary-foreground mb-6">
-                Building Better Businesses Since 2009
+                Building Better Businesses Since 2025
               </h1>
               <p className="text-primary-foreground/80 text-lg leading-relaxed">
-                MASIRA & CO Consulting Ltd is a multi-service professional firm dedicated to
+                Masira Consulting Ltd is a multi-service professional firm dedicated to
                 empowering organizations across Kenya and East Africa with integrated business solutions.
               </p>
             </motion.div>

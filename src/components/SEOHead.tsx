@@ -9,10 +9,33 @@ interface SEOHeadProps {
 }
 
 const SITE = {
-  name: "MASIRA Consulting",
-  url: "https://masiraconsulting.co.ke",
+  name: "Masira Consulting Ltd",
+  url: "https://masira-consulting-ltd.vercel.app",
   description:
-    "Integrated Business Solutions Consulting — management consulting, HR, accounting, ICT, and marketing services for SMEs, startups, and corporates in Kenya & East Africa.",
+    "Masira Consulting Ltd — professional management consulting, HR solutions, accounting, ICT, and marketing services for SMEs, startups, and corporates in Nairobi, Kenya and East Africa.",
+};
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: SITE.name,
+  url: SITE.url,
+  description: SITE.description,
+  telephone: "+254141482542",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Fedha",
+    addressLocality: "Nairobi",
+    addressCountry: "KE",
+  },
+  areaServed: ["KE", "TZ", "UG", "RW"],
+  serviceType: [
+    "Management Consulting",
+    "Human Resource Solutions",
+    "Sales and Marketing",
+    "Accounting and Bookkeeping",
+    "ICT Consultancy",
+  ],
+  keywords: "management consulting Kenya, HR solutions Nairobi, accounting services Kenya, ICT consultancy Nairobi, business consulting East Africa, SME consulting Kenya, marketing services Nairobi",
 };
 
 const orgSchema = {
@@ -37,7 +60,7 @@ const orgSchema = {
 };
 
 const SEOHead = ({ title, description, path = "/", type = "website", jsonLd }: SEOHeadProps) => {
-  const pageTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} — Integrated Business Solutions`;
+  const pageTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} — Professional Business Consulting in Kenya`;
   const pageDesc = description || SITE.description;
   const url = `${SITE.url}${path}`;
 

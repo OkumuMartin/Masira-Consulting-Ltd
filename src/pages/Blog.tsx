@@ -267,10 +267,10 @@ const Blog = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Insights & Blog"
-        description="Expert articles on management consulting, HR, marketing, finance, and technology for businesses in Kenya and East Africa."
-        path="/blog"
-      />
+  title="Insights & Blog"
+  description="Expert articles on management consulting, HR, marketing, finance, and technology from Masira Consulting Ltd — helping businesses grow in Nairobi, Kenya and East Africa."
+  path="/blog"
+/>
       <Navbar />
       <main>
         <section className="pt-32 pb-16 bg-gradient-primary">

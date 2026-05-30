@@ -77,7 +77,7 @@ const Contact = () => {
     <div className="min-h-screen">
       <SEOHead
         title="Contact Us"
-        description="Get in touch with IBS Consulting for a free consultation on management, HR, accounting, ICT, or marketing services."
+        description="Contact Masira Consulting Ltd in Nairobi, Kenya for a free consultation on management, HR, accounting, ICT, or marketing services. Call +254 141 482 542."
         path="/contact"
       />
       <Navbar />

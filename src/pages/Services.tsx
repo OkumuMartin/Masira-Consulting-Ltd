@@ -76,7 +76,7 @@ const serviceCategories = [
 const Services = () => {
   return (
     <div className="min-h-screen">
-      <SEOHead title="Services" description="Explore IBS Consulting's integrated services: management consulting, HR, sales & marketing, accounting, and ICT consultancy for businesses in East Africa." path="/services" />
+      <SEOHead title="Services" description="Explore Masira Consulting Ltd's professional services: management consulting, HR solutions, sales & marketing, accounting, and ICT consultancy for businesses in Nairobi, Kenya and East Africa." path="/services" />
       <Navbar />
       <main>
         <section className="pt-32 pb-16 bg-gradient-primary">
