@@ -268,7 +268,7 @@ const Blog = () => {
     <div className="min-h-screen">
       <SEOHead
   title="Insights & Blog"
-  description="Expert articles on management consulting, HR, marketing, finance, and technology from Masira Consulting Ltd — helping businesses grow in Nairobi, Kenya and East Africa."
+  description="Expert articles on management consulting, HR, marketing, finance, and technology from Masira & CO Consulting Ltd — helping businesses grow in Nairobi, Kenya and East Africa."
   path="/blog"
 />
       <Navbar />
