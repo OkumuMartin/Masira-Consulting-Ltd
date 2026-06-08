@@ -89,10 +89,10 @@ const Navbar = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               />
               <div className="hidden sm:block">
-                <p className="font-display font-bold text-foreground text-sm leading-tight">
+                <p className="font-display font-bold text-foreground text-sm leading-tight tracking-wide">
                   Masira & CO
                 </p>
-                <p className="text-muted-foreground text-xs">Consulting Ltd</p>
+                <p className="text-secondary text-xs font-medium tracking-widest uppercase">Consulting Ltd</p>
               </div>
             </Link>
 
