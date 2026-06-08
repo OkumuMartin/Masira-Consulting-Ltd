@@ -30,7 +30,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   // 2. Send confirmation email to the client
   await resend.emails.send({
-    from: "Masira Consulting <onboarding@resend.dev>",
+    from: "Masira Consulting <info@masiraconsultingltd.com>",
     to: email,
     subject: "We received your message!",
     html: `
@@ -49,7 +49,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   // 3. Send notification email to admin
   await resend.emails.send({
-    from: "Masira Website <onboarding@resend.dev>",
+    from: "Masira Consulting <info@masiraconsultingltd.com>",
     to: process.env.ADMIN_EMAIL!,
     subject: `New Inquiry: ${service || "General"} — ${name}`,
     html: `

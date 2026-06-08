@@ -30,7 +30,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   // Send welcome email
   await resend.emails.send({
-    from: "Masira Consulting <onboarding@resend.dev>",
+    from: "Masira Consulting <info@masiraconsultingltd.com>",
     to: email,
     subject: "Welcome to Masira Consulting Insights!",
     html: `
