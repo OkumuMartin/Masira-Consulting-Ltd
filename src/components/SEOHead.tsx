@@ -10,7 +10,7 @@ interface SEOHeadProps {
 
 const SITE = {
   name: "Masira & CO Consulting Ltd",
-  url: "https://masira-consulting-ltd.vercel.app",
+  url: "https://masiraconsultingltd.com",
   description:
     "Masira & Co Consulting Ltd — professional management consulting, HR solutions, accounting, ICT, and marketing services for SMEs, startups, and corporates in Nairobi, Kenya and East Africa.",
 };
