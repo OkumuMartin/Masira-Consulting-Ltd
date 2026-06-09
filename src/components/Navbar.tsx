@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -38,21 +38,23 @@ const Navbar = () => {
           <motion.div
             initial={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="bg-gradient-primary text-primary-foreground text-xs py-2 px-4 flex items-center justify-between relative z-50"
+            className="bg-gradient-primary text-primary-foreground text-xs py-2 px-4 relative z-50"
           >
             <div className="container flex items-center justify-between w-full">
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-3">
                 <a href="tel:+254141482542" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
-                  <Phone size={12} />
-                  <span>+254 141 482 542</span>
+                  <Phone size={11} />
+                  <span className="hidden xs:inline">+254 141 482 542</span>
+                  <span className="xs:hidden">Call Us</span>
                 </a>
-                <a href="mailto:info@masiraconsultingltd.com" className="hidden sm:flex items-center gap-1.5 hover:text-secondary transition-colors">
-                  <Mail size={12} />
-                  <span>info@masiraconsultingltd.com</span>
+                <a href="mailto:info@masiraconsultingltd.com" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
+                  <Mail size={11} />
+                  <span className="hidden md:inline">info@masiraconsultingltd.com</span>
+                  <span className="md:hidden hidden sm:inline">Email Us</span>
                 </a>
               </div>
-              <div className="flex items-center gap-4">
-                <span className="hidden md:block text-primary-foreground/80">🎯 Free consultation for new clients</span>
+              <div className="flex items-center gap-3">
+                <span className="hidden lg:block text-primary-foreground/80">Free consultation for new clients</span>
                 <button
                   onClick={() => setAnnouncementVisible(false)}
                   className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
@@ -79,20 +81,22 @@ const Navbar = () => {
         <div className="container">
           <div className="flex items-center justify-between h-16">
 
-            {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 group">
+            {/* Logo + Company Name — visible on ALL screens */}
+            <Link to="/" className="flex items-center gap-2 group shrink-0">
               <motion.img
                 src={logo}
                 alt="Masira & CO Consulting Ltd"
-                className="h-10 w-10 rounded-full object-cover"
+                className="h-9 w-9 rounded-full object-cover shrink-0"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               />
-              <div className="hidden sm:block">
+              <div className="block">
                 <p className="font-display font-bold text-foreground text-sm leading-tight tracking-wide">
                   Masira & CO
                 </p>
-                <p className="text-secondary text-xs font-medium tracking-widest uppercase">Consulting Ltd</p>
+                <p className="text-secondary text-xs font-medium tracking-wider uppercase">
+                  Consulting Ltd
+                </p>
               </div>
             </Link>
 
@@ -126,7 +130,7 @@ const Navbar = () => {
             <div className="flex items-center gap-2">
               <ThemeToggle />
 
-              {/* CTA Button - Desktop */}
+              {/* CTA Button - Desktop only */}
               <Link to="/contact" className="hidden md:block">
                 <Button
                   size="sm"
@@ -205,7 +209,7 @@ const Navbar = () => {
                   );
                 })}
 
-                {/* Mobile CTA */}
+                {/* Mobile CTA Button */}
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -213,7 +217,7 @@ const Navbar = () => {
                   className="pt-3 pb-2 px-1"
                 >
                   <Link to="/contact" className="block">
-                    <Button className="w-full bg-gradient-primary border-0 text-primary-foreground hover:opacity-90 font-medium">
+                    <Button className="w-full bg-gradient-primary border-0 text-primary-foreground hover:opacity-90 font-medium text-sm py-5">
                       Get Free Consultation
                     </Button>
                   </Link>
@@ -224,14 +228,24 @@ const Navbar = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.35 }}
-                  className="pt-2 pb-1 px-4 flex flex-col gap-2 border-t border-border mt-2"
+                  className="pt-3 pb-2 px-4 flex flex-col gap-3 border-t border-border"
                 >
-                  <a href="tel:+254141482542" className="flex items-center gap-2 text-xs text-muted-foreground hover:text-secondary transition-colors">
-                    <Phone size={12} />
-                    +254 141 482 542
+                  <a href="tel:+254141482542" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-secondary transition-colors">
+                    <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center shrink-0">
+                      <Phone size={14} className="text-secondary" />
+                    </div>
+                    +254 141 482 542 (Safaricom)
                   </a>
-                  <a href="mailto:info@masiraconsultingltd.com" className="flex items-center gap-2 text-xs text-muted-foreground hover:text-secondary transition-colors">
-                    <Mail size={12} />
+                  <a href="tel:+254751128860" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-secondary transition-colors">
+                    <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center shrink-0">
+                      <Phone size={14} className="text-secondary" />
+                    </div>
+                    +254 751 128 860 (Airtel)
+                  </a>
+                  <a href="mailto:info@masiraconsultingltd.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-secondary transition-colors">
+                    <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center shrink-0">
+                      <Mail size={14} className="text-secondary" />
+                    </div>
                     info@masiraconsultingltd.com
                   </a>
                 </motion.div>
