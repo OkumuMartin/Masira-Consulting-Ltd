@@ -40,17 +40,15 @@ const Navbar = () => {
             exit={{ height: 0, opacity: 0 }}
             className="bg-gradient-primary text-primary-foreground text-xs py-2 px-4 relative z-50"
           >
-            <div className="container flex items-center justify-between w-full">
-              <div className="flex items-center gap-3">
+            <div className="container flex items-center justify-between w-full flex-wrap gap-2">
+              <div className="flex items-center gap-4 flex-wrap">
                 <a href="tel:+254141482542" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
                   <Phone size={11} />
-                  <span className="hidden xs:inline">+254 141 482 542</span>
-                  <span className="xs:hidden">Call Us</span>
+                  <span>+254 141 482 542</span>
                 </a>
                 <a href="mailto:info@masiraconsultingltd.com" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
                   <Mail size={11} />
-                  <span className="hidden md:inline">info@masiraconsultingltd.com</span>
-                  <span className="md:hidden hidden sm:inline">Email Us</span>
+                  <span>info@masiraconsultingltd.com</span>
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -90,7 +88,7 @@ const Navbar = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               />
-              <div className="block">
+              <div>
                 <p className="font-display font-bold text-foreground text-sm leading-tight tracking-wide">
                   Masira & CO
                 </p>
