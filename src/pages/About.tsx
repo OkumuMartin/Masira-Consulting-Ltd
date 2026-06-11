@@ -13,10 +13,10 @@ const values = [
 ];
 
 const team = [
-  { name: "James Mthembu", role: "CEO & Founder", bio: "20+ years in management consulting across Africa." },
-  { name: "Priya Naidoo", role: "Head of HR Solutions", bio: "Expert in talent acquisition and organizational development." },
-  { name: "Michael van der Berg", role: "Director, ICT", bio: "Digital transformation specialist with enterprise background." },
-  { name: "Lindiwe Dlamini", role: "CFO & Accounting Lead", bio: "Chartered accountant with deep SME advisory experience." },
+  { name: "Wilson Masira", role: "CEO & Founder", bio: "20+ years in management consulting across Africa." },
+  { name: "Wilson Masira", role: "Head of HR Solutions", bio: "Expert in talent acquisition and organizational development." },
+  { name: "Martin Okumu", role: "Director, ICT", bio: "Digital transformation specialist with enterprise background." },
+  { name: "Wilson Masira", role: "CFO & Accounting Lead", bio: "Chartered accountant with deep SME advisory experience." },
 ];
 
 const About = () => {
