@@ -206,7 +206,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="font-medium text-foreground text-sm">Email</p>
-                        <a href="mailto:masiraconsultingltd@gmail.com" className="text-muted-foreground text-sm hover:text-secondary transition-colors">masiraconsultingltd@gmail.com</a>
+                        <a href="mailto:masiraconsultingltd@gmail.com" className="text-muted-foreground text-sm hover:text-secondary transition-colors">info@masiraconsultingltd.com</a>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
