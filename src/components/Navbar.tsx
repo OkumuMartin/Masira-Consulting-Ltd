@@ -12,6 +12,7 @@ const navLinks = [
   { label: "Services", path: "/services" },
   { label: "Insights", path: "/blog" },
   { label: "Contact", path: "/contact" },
+  { label: "Pay Now", path: "/payment" },
 ];
 
 const Navbar = () => {
