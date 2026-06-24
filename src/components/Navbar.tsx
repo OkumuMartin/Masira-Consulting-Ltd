@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -19,7 +19,37 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [announcementVisible, setAnnouncementVisible] = useState(true);
+  const [currentTime, setCurrentTime] = useState(new Date());
   const location = useLocation();
+
+  useEffect(() => {
+    const timer = setInterval(() => setCurrentTime(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatFull = (date: Date) => {
+    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const day = days[date.getDay()];
+    const d = date.getDate();
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+    const hh = date.getHours().toString().padStart(2, "0");
+    const mm = date.getMinutes().toString().padStart(2, "0");
+    const ss = date.getSeconds().toString().padStart(2, "0");
+    return `${day}, ${d} ${month} ${year} | ${hh}:${mm}:${ss}`;
+  };
+
+  const formatShort = (date: Date) => {
+    const days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const d = date.getDate();
+    const month = months[date.getMonth()];
+    const hh = date.getHours().toString().padStart(2, "0");
+    const mm = date.getMinutes().toString().padStart(2, "0");
+    const ss = date.getSeconds().toString().padStart(2, "0");
+    return `${days[date.getDay()]}, ${d} ${month} | ${hh}:${mm}:${ss}`;
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -53,6 +83,17 @@ const Navbar = () => {
                 </a>
               </div>
               <div className="flex items-center gap-3">
+                {/* Full date+time on large screens */}
+                <span className="hidden lg:flex items-center gap-1.5 font-mono text-primary-foreground/90">
+                  <Clock size={11} />
+                  {formatFull(currentTime)}
+                </span>
+                {/* Short date+time on medium screens */}
+                <span className="hidden sm:flex lg:hidden items-center gap-1.5 font-mono text-primary-foreground/90">
+                  <Clock size={11} />
+                  {formatShort(currentTime)}
+                </span>
+                <span className="hidden lg:block text-primary-foreground/60">|</span>
                 <span className="hidden lg:block text-primary-foreground/80">Free consultation for new clients</span>
                 <button
                   onClick={() => setAnnouncementVisible(false)}
