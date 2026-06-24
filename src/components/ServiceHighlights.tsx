@@ -1,4 +1,4 @@
-import { Briefcase, Users, BarChart3, BookOpen, Monitor } from "lucide-react";
+import { Briefcase, Users, BarChart3, BookOpen, Monitor, GraduationCap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -28,14 +28,23 @@ const services = [
     title: "ICT Consultancy",
     desc: "IT infrastructure, system integration, cybersecurity, and digital transformation.",
   },
+  {
+    icon: GraduationCap,
+    title: "Training & Development",
+    desc: "Corporate training, leadership development, skills assessment, and capacity building programs for your workforce.",
+  },
 ];
 
 const ServiceHighlights = () => {
   return (
     <section className="py-24 bg-gradient-surface">
       <div className="container">
+
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-secondary font-medium text-sm uppercase tracking-wide mb-3">What We Do</p>
+          <p className="text-secondary font-medium text-sm uppercase tracking-wide mb-3">
+            What We Do
+          </p>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
             Comprehensive Business Solutions
           </h2>
@@ -45,6 +54,7 @@ const ServiceHighlights = () => {
           </p>
         </div>
 
+        {/* Services Grid — 3 columns, 2 rows */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, i) => (
             <motion.div
@@ -61,12 +71,17 @@ const ServiceHighlights = () => {
                 <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                   <service.icon className="w-6 h-6 text-primary-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{service.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
+                <h3 className="text-lg font-semibold text-foreground mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {service.desc}
+                </p>
               </Link>
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
