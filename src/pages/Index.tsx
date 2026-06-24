@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ServiceHighlights from "@/components/ServiceHighlights";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import StatsCounter from "@/components/StatsCounter";
 import Testimonials from "@/components/Testimonials";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
@@ -16,6 +17,7 @@ const Index = () => {
         <Hero />
         <ServiceHighlights />
         <WhyChooseUs />
+        <StatsCounter />
         <Testimonials />
         <CTABanner />
       </main>
