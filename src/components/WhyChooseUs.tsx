@@ -2,17 +2,26 @@ import { Shield, TrendingUp, Award, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
 const reasons = [
-  { icon: Award, title: "Proven Expertise", desc: "Decades of combined experience across industries and disciplines." },
-  { icon: TrendingUp, title: "Results-Driven", desc: "Measurable outcomes with clear KPIs and accountability." },
-  { icon: Shield, title: "Trusted Partner", desc: "Confidential, reliable, and committed to your long-term success." },
-  { icon: Clock, title: "Agile Delivery", desc: "Rapid deployment with flexible engagement models." },
-];
-
-const stats = [
-  { value: "200+", label: "Clients Served" },
-  { value: "15+", label: "Years Experience" },
-  { value: "98%", label: "Client Satisfaction" },
-  { value: "50+", label: "Team Members" },
+  {
+    icon: Award,
+    title: "Proven Expertise",
+    desc: "Decades of combined experience across industries and disciplines in Kenya and East Africa.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Results-Driven",
+    desc: "Measurable outcomes with clear KPIs and full accountability to your business goals.",
+  },
+  {
+    icon: Shield,
+    title: "Trusted Partner",
+    desc: "Confidential, reliable, and fully committed to your long-term success.",
+  },
+  {
+    icon: Clock,
+    title: "Agile Delivery",
+    desc: "Rapid deployment with flexible engagement models tailored to your needs.",
+  },
 ];
 
 const WhyChooseUs = () => {
@@ -20,14 +29,19 @@ const WhyChooseUs = () => {
     <section className="py-24">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+          {/* LEFT — Text Content */}
           <div>
-            <p className="text-secondary font-medium text-sm uppercase tracking-wide mb-3">Why Apex</p>
+            <p className="text-secondary font-medium text-sm uppercase tracking-wide mb-3">
+              Why Choose Us
+            </p>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-              Why Leading Organizations Choose Us
+              Why Leading Organizations Choose Masira & CO
             </h2>
             <p className="text-muted-foreground mb-10 leading-relaxed">
               We combine deep industry knowledge with innovative methodologies to
-              deliver transformative results for businesses of all sizes.
+              deliver transformative results for businesses of all sizes across
+              Kenya and East Africa.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {reasons.map((r, i) => (
@@ -51,21 +65,42 @@ const WhyChooseUs = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
-            {stats.map((s, i) => (
-              <motion.div
-                key={s.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="bg-card rounded-xl p-8 shadow-card text-center"
-              >
-                <p className="text-3xl md:text-4xl font-display font-bold text-gradient mb-2">{s.value}</p>
-                <p className="text-muted-foreground text-sm">{s.label}</p>
-              </motion.div>
-            ))}
-          </div>
+          {/* RIGHT — Visual Brand Card */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative"
+          >
+            <div className="rounded-2xl bg-gradient-primary p-10 text-primary-foreground text-center shadow-elevated">
+              <p className="text-6xl font-display font-bold mb-2">10+</p>
+              <p className="text-lg font-semibold mb-8 text-primary-foreground/90">
+                Years Serving Businesses in East Africa
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { value: "Kenya", label: "Headquartered In" },
+                  { value: "5+", label: "Industries Covered" },
+                  { value: "East Africa", label: "Region Served" },
+                  { value: "24/7", label: "Client Support" },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="bg-primary-foreground/10 rounded-xl p-4 border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-colors"
+                  >
+                    <p className="text-xl font-bold text-primary-foreground">
+                      {item.value}
+                    </p>
+                    <p className="text-xs text-primary-foreground/70 mt-1">
+                      {item.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
         </div>
       </div>
     </section>
