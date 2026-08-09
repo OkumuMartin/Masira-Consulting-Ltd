@@ -107,7 +107,7 @@ const Footer = () => {
             <div className="flex items-center gap-2.5 mb-4">
               <img
                 src={logo}
-                alt="IBS Consulting Logo"
+                alt="Masira & CO Consulting Ltd logo"
                 className="h-9 w-auto object-contain"
               />
               <span className="font-display text-xl font-bold">MASIRA & CO Consulting Ltd</span>
